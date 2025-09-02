@@ -3,6 +3,7 @@ package guddo.service;
 import guddo.domain.User;
 import guddo.domain.enums.Role;
 import guddo.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -23,6 +24,7 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
 
     @Override
+    @Transactional
     public OAuth2User loadUser(OAuth2UserRequest request) {
         OAuth2User oAuth2User = super.loadUser(request);
 
