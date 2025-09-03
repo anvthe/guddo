@@ -109,7 +109,7 @@ public class AuthenticationService {
 
         if (!user.isEnabled()) {
 
-            throw new IllegalArgumentException("Account not verified. Please verify before logging in.");
+            throw new IllegalArgumentException("Account not verified. Please verify before logging in. Check your email.");
         }
 
         try {
