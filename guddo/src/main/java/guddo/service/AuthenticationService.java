@@ -118,7 +118,7 @@ public class AuthenticationService {
             );
         } catch (BadCredentialsException ex) {
 
-            throw new IllegalArgumentException("Invalid email or password.");
+            throw new IllegalArgumentException("Invalid email or password. Try again.");
         } catch (DisabledException ex) {
             throw new IllegalArgumentException("Account not verified. Please verify before logging in.");
         }
